@@ -9,9 +9,11 @@ $cek = true;
 
 if(!$data){
     $msg = "User Belum Terdaftar";
+    $error = 0;
     $cek = false;
 } else if($data["password"] !== $password){
     $msg = "Password Anda Salah";
+    $error = 1;
     $cek = false;
 } 
 
@@ -22,12 +24,14 @@ if($cek){
             "msg" => "Berhasil Login"
         )
     );
+    $_SESSION["nim"] = $data["nim"];
 
 } else {
    $out = array(
        "status" => 0,
        "data" => array(
            "msg" => $msg,
+           "error" => $error
        )
    );
 }

@@ -32,6 +32,6 @@ require_once 'functions.php';
         <input type="number" id="wa" name="wa" autocomplete="off">
         <input type="submit" name="submit" value="Daftar">
     </form>
-    
+    saya
 </body>
 </html>
